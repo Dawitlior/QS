@@ -1,0 +1,482 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes gridFade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes datePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes chaosFloat1 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(8px, -5px);
+  }
+  50% {
+    transform: translate(-6px, 4px);
+  }
+  75% {
+    transform: translate(4px, 7px);
+  }
+}
+
+@keyframes chaosFloat2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-7px, 6px);
+  }
+  50% {
+    transform: translate(9px, -4px);
+  }
+  75% {
+    transform: translate(-5px, -8px);
+  }
+}
+
+@keyframes chaosFloat3 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(6px, 8px);
+  }
+  50% {
+    transform: translate(-8px, -6px);
+  }
+  75% {
+    transform: translate(7px, -5px);
+  }
+}
+
+@keyframes chaosFloat4 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-9px, -7px);
+  }
+  50% {
+    transform: translate(5px, 8px);
+  }
+  75% {
+    transform: translate(-6px, 4px);
+  }
+}
+
+@keyframes chaosFloat5 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(7px, -6px);
+  }
+  50% {
+    transform: translate(-5px, 7px);
+  }
+  75% {
+    transform: translate(8px, -4px);
+  }
+}
+
+/* Signal Storm Animations - Chaos to Order */
+
+/* Grid constraint fades in during Phase 2 */
+@keyframes gridConstraint {
+  0%, 33% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  66%, 100% {
+    opacity: 0.3;
+  }
+}
+
+/* Signal chaos animations - transition from erratic to smooth */
+@keyframes signalChaos1 {
+  0% {
+    d: path("M 0 150 Q 300 120, 600 140 T 1200 130");
+    stroke: rgba(255, 200, 200, 0.4);
+    opacity: 0.4;
+  }
+  10% {
+    d: path("M 0 150 Q 280 95, 580 165 T 1200 115");
+    opacity: 0.6;
+  }
+  20% {
+    d: path("M 0 150 Q 320 140, 620 125 T 1200 145");
+    opacity: 0.3;
+  }
+  33% {
+    d: path("M 0 150 Q 290 110, 590 155 T 1200 135");
+    stroke: rgba(255, 200, 200, 0.4);
+    opacity: 0.5;
+  }
+  50% {
+    d: path("M 0 180 Q 300 175, 600 180 T 1200 180");
+    stroke: rgba(150, 230, 230, 0.5);
+    opacity: 0.7;
+  }
+  66%, 100% {
+    d: path("M 0 180 Q 300 180, 600 180 T 1200 180");
+    stroke: rgba(120, 220, 220, 0.6);
+    opacity: 0.8;
+  }
+}
+
+@keyframes signalChaos2 {
+  0% {
+    d: path("M 0 180 Q 250 200, 500 170 T 1200 185");
+    opacity: 0.3;
+  }
+  15% {
+    d: path("M 0 180 Q 270 215, 520 155 T 1200 195");
+    opacity: 0.5;
+  }
+  25% {
+    d: path("M 0 180 Q 240 185, 490 180 T 1200 175");
+    opacity: 0.4;
+  }
+  33% {
+    d: path("M 0 180 Q 255 195, 505 175 T 1200 185");
+    opacity: 0.45;
+  }
+  50% {
+    d: path("M 0 240 Q 300 240, 600 240 T 1200 240");
+    stroke: rgba(150, 230, 230, 0.4);
+    opacity: 0.6;
+  }
+  66%, 100% {
+    d: path("M 0 240 Q 300 240, 600 240 T 1200 240");
+    stroke: rgba(120, 220, 220, 0.5);
+    opacity: 0.7;
+  }
+}
+
+@keyframes signalChaos3 {
+  0% {
+    d: path("M 0 210 Q 350 190, 700 215 T 1200 200");
+    opacity: 0.35;
+  }
+  12% {
+    d: path("M 0 210 Q 365 175, 715 230 T 1200 190");
+    opacity: 0.5;
+  }
+  28% {
+    d: path("M 0 210 Q 340 205, 690 200 T 1200 210");
+    opacity: 0.3;
+  }
+  33% {
+    d: path("M 0 210 Q 350 195, 700 210 T 1200 205");
+    opacity: 0.4;
+  }
+  50% {
+    d: path("M 0 300 Q 300 300, 600 300 T 1200 300");
+    stroke: rgba(150, 230, 230, 0.45);
+    opacity: 0.65;
+  }
+  66%, 100% {
+    d: path("M 0 300 Q 300 300, 600 300 T 1200 300");
+    stroke: rgba(120, 220, 220, 0.55);
+    opacity: 0.75;
+  }
+}
+
+@keyframes signalChaos4 {
+  0% {
+    d: path("M 0 350 Q 300 380, 600 340 T 1200 360");
+    opacity: 0.4;
+  }
+  18% {
+    d: path("M 0 350 Q 285 395, 615 325 T 1200 375");
+    opacity: 0.6;
+  }
+  30% {
+    d: path("M 0 350 Q 310 365, 590 355 T 1200 350");
+    opacity: 0.35;
+  }
+  33% {
+    d: path("M 0 350 Q 295 375, 605 345 T 1200 365");
+    opacity: 0.5;
+  }
+  50% {
+    d: path("M 0 400 Q 300 400, 600 400 T 1200 400");
+    stroke: rgba(150, 230, 230, 0.5);
+    opacity: 0.7;
+  }
+  66%, 100% {
+    d: path("M 0 400 Q 300 400, 600 400 T 1200 400");
+    stroke: rgba(120, 220, 220, 0.6);
+    opacity: 0.8;
+  }
+}
+
+@keyframes signalChaos5 {
+  0% {
+    d: path("M 0 400 Q 250 420, 500 390 T 1200 400");
+    opacity: 0.3;
+  }
+  14% {
+    d: path("M 0 400 Q 265 435, 515 375 T 1200 410");
+    opacity: 0.5;
+  }
+  26% {
+    d: path("M 0 400 Q 245 405, 495 400 T 1200 395");
+    opacity: 0.4;
+  }
+  33% {
+    d: path("M 0 400 Q 255 415, 505 395 T 1200 405");
+    opacity: 0.45;
+  }
+  50% {
+    d: path("M 0 460 Q 300 460, 600 460 T 1200 460");
+    stroke: rgba(150, 230, 230, 0.4);
+    opacity: 0.6;
+  }
+  66%, 100% {
+    d: path("M 0 460 Q 300 460, 600 460 T 1200 460");
+    stroke: rgba(120, 220, 220, 0.5);
+    opacity: 0.7;
+  }
+}
+
+@keyframes signalChaos6 {
+  0% {
+    d: path("M 0 450 Q 350 430, 700 460 T 1200 440");
+    opacity: 0.35;
+  }
+  16% {
+    d: path("M 0 450 Q 365 415, 715 475 T 1200 430");
+    opacity: 0.55;
+  }
+  24% {
+    d: path("M 0 450 Q 340 445, 690 450 T 1200 450");
+    opacity: 0.3;
+  }
+  33% {
+    d: path("M 0 450 Q 350 435, 700 455 T 1200 445");
+    opacity: 0.4;
+  }
+  50% {
+    d: path("M 0 520 Q 300 520, 600 520 T 1200 520");
+    stroke: rgba(150, 230, 230, 0.45);
+    opacity: 0.65;
+  }
+  66%, 100% {
+    d: path("M 0 520 Q 300 520, 600 520 T 1200 520");
+    stroke: rgba(120, 220, 220, 0.55);
+    opacity: 0.75;
+  }
+}
+
+@keyframes signalChaos7 {
+  0% {
+    d: path("M 0 600 Q 300 630, 600 590 T 1200 610");
+    opacity: 0.3;
+  }
+  13% {
+    d: path("M 0 600 Q 285 645, 615 575 T 1200 620");
+    opacity: 0.5;
+  }
+  27% {
+    d: path("M 0 600 Q 310 615, 590 600 T 1200 600");
+    opacity: 0.35;
+  }
+  33% {
+    d: path("M 0 600 Q 295 625, 605 595 T 1200 615");
+    opacity: 0.4;
+  }
+  50% {
+    d: path("M 0 600 Q 300 600, 600 600 T 1200 600");
+    stroke: rgba(150, 230, 230, 0.4);
+    opacity: 0.6;
+  }
+  66%, 100% {
+    d: path("M 0 600 Q 300 600, 600 600 T 1200 600");
+    stroke: rgba(120, 220, 220, 0.5);
+    opacity: 0.7;
+  }
+}
+
+@keyframes signalChaos8 {
+  0% {
+    d: path("M 0 650 Q 250 640, 500 665 T 1200 650");
+    opacity: 0.35;
+  }
+  11% {
+    d: path("M 0 650 Q 265 625, 515 675 T 1200 640");
+    opacity: 0.55;
+  }
+  29% {
+    d: path("M 0 650 Q 245 655, 495 645 T 1200 655");
+    opacity: 0.3;
+  }
+  33% {
+    d: path("M 0 650 Q 255 645, 505 660 T 1200 650");
+    opacity: 0.45;
+  }
+  50% {
+    d: path("M 0 660 Q 300 660, 600 660 T 1200 660");
+    stroke: rgba(150, 230, 230, 0.45);
+    opacity: 0.65;
+  }
+  66%, 100% {
+    d: path("M 0 660 Q 300 660, 600 660 T 1200 660");
+    stroke: rgba(120, 220, 220, 0.55);
+    opacity: 0.75;
+  }
+}
+
+/* Pulse signals - horizontal lines */
+@keyframes signalPulse1 {
+  0%, 33% {
+    opacity: 0.2;
+    stroke-width: 1;
+  }
+  50% {
+    opacity: 0.5;
+    stroke-width: 1.5;
+  }
+  66%, 100% {
+    opacity: 0.4;
+    stroke-width: 1;
+  }
+}
+
+@keyframes signalPulse2 {
+  0%, 33% {
+    opacity: 0.25;
+    stroke-width: 1;
+  }
+  50% {
+    opacity: 0.55;
+    stroke-width: 1.5;
+  }
+  66%, 100% {
+    opacity: 0.45;
+    stroke-width: 1;
+  }
+}
+
+/* Vertical drift signals */
+@keyframes verticalDrift1 {
+  0% {
+    transform: translateX(0);
+    opacity: 0.15;
+  }
+  15% {
+    transform: translateX(-15px);
+    opacity: 0.25;
+  }
+  33% {
+    transform: translateX(10px);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 0.35;
+    stroke: rgba(150, 230, 230, 0.3);
+  }
+  66%, 100% {
+    transform: translateX(0);
+    opacity: 0.3;
+    stroke: rgba(120, 220, 220, 0.35);
+  }
+}
+
+@keyframes verticalDrift2 {
+  0% {
+    transform: translateX(0);
+    opacity: 0.15;
+  }
+  18% {
+    transform: translateX(20px);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translateX(-12px);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 0.35;
+    stroke: rgba(150, 230, 230, 0.3);
+  }
+  66%, 100% {
+    transform: translateX(0);
+    opacity: 0.3;
+    stroke: rgba(120, 220, 220, 0.35);
+  }
+}
+
+@keyframes verticalDrift3 {
+  0% {
+    transform: translateX(0);
+    opacity: 0.15;
+  }
+  20% {
+    transform: translateX(-18px);
+    opacity: 0.28;
+  }
+  33% {
+    transform: translateX(14px);
+    opacity: 0.18;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 0.35;
+    stroke: rgba(150, 230, 230, 0.3);
+  }
+  66%, 100% {
+    transform: translateX(0);
+    opacity: 0.3;
+    stroke: rgba(120, 220, 220, 0.35);
+  }
+}
