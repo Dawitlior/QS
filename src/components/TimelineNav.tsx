@@ -112,17 +112,11 @@ export default function TimelineNav({ activeSection }: TimelineNavProps) {
         })}
       </div>
 
-      <div className="absolute -top-20 left-0 flex flex-col space-y-4">
+      <div className="absolute -top-20 left-0">
         <div className="flex items-center space-x-2">
           <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
           <span className="text-white font-mono text-sm tracking-wider">FRAMEWORK</span>
         </div>
-        <a
-          href="https://dossierquant.netlify.app/"
-          className="px-4 py-2 bg-cyan-600 text-white font-mono text-xs tracking-wider uppercase border border-cyan-500 hover:bg-cyan-500 hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 whitespace-nowrap"
-        >
-          Design Dossier
-        </a>
       </div>
     </div>
   );

@@ -32,22 +32,6 @@ function App() {
     <div className="min-h-screen bg-black text-gray-200">
       <TimelineNav activeSection={activeSection} />
 
-      {/* Mobile Header with Dossier Link */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-95 border-b border-gray-900 backdrop-blur-sm">
-        <div className="flex items-center justify-between px-4 py-3">
-          <div className="flex items-center space-x-2">
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
-            <span className="text-white font-mono text-xs tracking-wider">FRAMEWORK</span>
-          </div>
-          <a
-            href="https://dossierquant.netlify.app/"
-            className="px-4 py-2 bg-cyan-600 text-white font-mono text-[10px] tracking-wider uppercase border border-cyan-500 hover:bg-cyan-500 hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 whitespace-nowrap"
-          >
-            Design Dossier
-          </a>
-        </div>
-      </div>
-
       <section id="opening" className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
         {/* Signal Storm Animation */}
         <div className="absolute inset-0 flex items-center justify-center">
@@ -218,19 +202,29 @@ function App() {
           >
             Entropy increases. Structure decides.
           </p>
-
-          <a
-            href="https://dossierquant.netlify.app/"
-            className="inline-block mt-16 px-8 py-4 bg-gradient-to-r from-cyan-600 to-emerald-600 text-white font-mono text-sm tracking-wider uppercase border border-cyan-500 hover:from-cyan-500 hover:to-emerald-500 hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 group"
-            style={{ animation: 'textFadeIn 1s ease-out 11s both' }}
-          >
-            <span className="flex items-center space-x-3">
-              <span>View System Design Dossier</span>
-              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </span>
-          </a>
         </div>
       </section>
+
+      {/* Design Dossier Transition - Hero-bound only */}
+      <div className="w-full border-t border-gray-900 bg-gradient-to-b from-black to-gray-950">
+        <div className="max-w-6xl mx-auto">
+          <a
+            href="https://dossierquant.netlify.app/"
+            className="group block w-full py-8 px-6 md:px-12 bg-gradient-to-r from-cyan-950/30 via-emerald-950/30 to-cyan-950/30 border-b border-cyan-900/30 hover:border-cyan-700/50 hover:from-cyan-950/50 hover:via-emerald-950/50 hover:to-cyan-950/50 transition-all duration-500"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <p className="text-xs tracking-[0.3em] uppercase text-cyan-600 font-mono mb-2">RESEARCH & DESIGN</p>
+                <p className="text-xl md:text-2xl text-white font-light tracking-tight group-hover:text-cyan-400 transition-colors duration-300">
+                  View System Design Dossier
+                </p>
+                <p className="text-sm text-gray-500 mt-2 font-light">A detailed examination of system architecture, methodology, and implementation logic</p>
+              </div>
+              <ChevronRight className="w-6 h-6 md:w-8 md:h-8 text-cyan-600 group-hover:text-cyan-400 group-hover:translate-x-2 transition-all duration-300 flex-shrink-0 ml-6" />
+            </div>
+          </a>
+        </div>
+      </div>
 
       <div className="max-w-6xl mx-auto lg:ml-[15rem] px-6 py-20">
 
