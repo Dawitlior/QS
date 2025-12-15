@@ -32,6 +32,22 @@ function App() {
     <div className="min-h-screen bg-black text-gray-200">
       <TimelineNav activeSection={activeSection} />
 
+      {/* Mobile Header with Dossier Link */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-95 border-b border-gray-900 backdrop-blur-sm">
+        <div className="flex items-center justify-between px-4 py-3">
+          <div className="flex items-center space-x-2">
+            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
+            <span className="text-white font-mono text-xs tracking-wider">FRAMEWORK</span>
+          </div>
+          <a
+            href="https://dossierquant.netlify.app/"
+            className="px-4 py-2 bg-cyan-600 text-white font-mono text-[10px] tracking-wider uppercase border border-cyan-500 hover:bg-cyan-500 hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 whitespace-nowrap"
+          >
+            Design Dossier
+          </a>
+        </div>
+      </div>
+
       <section id="opening" className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
         {/* Signal Storm Animation */}
         <div className="absolute inset-0 flex items-center justify-center">
@@ -202,6 +218,17 @@ function App() {
           >
             Entropy increases. Structure decides.
           </p>
+
+          <a
+            href="https://dossierquant.netlify.app/"
+            className="inline-block mt-16 px-8 py-4 bg-gradient-to-r from-cyan-600 to-emerald-600 text-white font-mono text-sm tracking-wider uppercase border border-cyan-500 hover:from-cyan-500 hover:to-emerald-500 hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 group"
+            style={{ animation: 'textFadeIn 1s ease-out 11s both' }}
+          >
+            <span className="flex items-center space-x-3">
+              <span>View System Design Dossier</span>
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
+          </a>
         </div>
       </section>
 
