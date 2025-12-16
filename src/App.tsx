@@ -1089,7 +1089,7 @@ function App() {
               </div>
             </div>
 
-            {/* Research Dossier Button - Only Location */}
+            {/* Research Paper Button - Only Location */}
             <div className="mt-16 w-full">
               <a
                 href="https://dossierquant.netlify.app/"
@@ -1097,7 +1097,7 @@ function App() {
                 rel="noopener noreferrer"
                 className="block w-full sm:w-auto sm:inline-block px-8 py-4 bg-cyan-900 bg-opacity-40 border-2 border-cyan-700 text-cyan-400 font-mono tracking-wide text-center hover:bg-cyan-800 hover:bg-opacity-50 hover:border-cyan-600 hover:text-cyan-300 transition-all duration-300 text-sm sm:text-base"
               >
-                View System Design Dossier
+                Research & System Philosophy
               </a>
             </div>
           </div>
