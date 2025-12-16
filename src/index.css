@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent horizontal scroll globally */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  max-width: 100%;
+}
+
 @keyframes scanline {
   0% {
     transform: translateY(-100%);

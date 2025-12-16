@@ -104,9 +104,9 @@ export default function TournamentBracket({ active }: TournamentBracketProps) {
   const pulseIntensity = Math.sin(phase * 0.3) * 0.3 + 0.7;
 
   return (
-    <div ref={containerRef} className="mt-16 p-4 md:p-8 bg-black border border-gray-900">
+    <div ref={containerRef} className="mt-16 p-4 md:p-8 bg-black border border-gray-900 w-full overflow-hidden">
       <div className="mb-8">
-        <h3 className="text-xl text-white mb-6 font-mono">RSPS ALTS — Tournament Allocation</h3>
+        <h3 className="text-lg sm:text-xl text-white mb-6 font-mono">RSPS ALTS — Tournament Allocation</h3>
 
         <div className="mb-6 p-6 bg-gray-950 border border-gray-800">
           <h4 className="text-xs text-gray-500 font-mono mb-3 tracking-wider">WHY A RELATIVE STRENGTH TOURNAMENT EXISTS</h4>
@@ -142,10 +142,10 @@ export default function TournamentBracket({ active }: TournamentBracketProps) {
       )}
 
       {active && (
-        <div className="relative min-h-[600px] border-2 border-emerald-900 bg-gray-950" style={{
+        <div className="relative min-h-[400px] sm:min-h-[600px] border-2 border-emerald-900 bg-gray-950 overflow-x-auto" style={{
           boxShadow: isVisible ? '0 0 40px rgba(16, 185, 129, 0.2)' : 'none'
         }}>
-          <svg className="w-full h-full min-h-[600px]" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
+          <svg className="w-full h-full min-h-[400px] sm:min-h-[600px]" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" style={{ minWidth: '800px' }}>
             <defs>
               <filter id="bracketGlow">
                 <feGaussianBlur stdDeviation="3" result="coloredBlur"/>

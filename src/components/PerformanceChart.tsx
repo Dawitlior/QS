@@ -89,15 +89,17 @@ export default function PerformanceChart() {
   const gridLines = [80, 60, 40, 20, 0, -20];
 
   return (
-    <div ref={chartRef} className="p-8 bg-gray-950 border border-gray-800">
-      <h3 className="text-xl text-white mb-8 font-mono">Cumulative Performance</h3>
+    <div ref={chartRef} className="p-4 sm:p-8 bg-gray-950 border border-gray-800 w-full overflow-hidden">
+      <h3 className="text-lg sm:text-xl text-white mb-6 sm:mb-8 font-mono">Cumulative Performance</h3>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center w-full overflow-x-auto">
         <svg
           width={chartWidth}
           height={chartHeight}
-          className="bg-black"
-          style={{ fontFamily: 'monospace' }}
+          viewBox={`0 0 ${chartWidth} ${chartHeight}`}
+          className="bg-black max-w-full h-auto"
+          style={{ fontFamily: 'monospace', minWidth: '320px' }}
+          preserveAspectRatio="xMidYMid meet"
         >
           <defs>
             <clipPath id="revealClip">
@@ -248,14 +250,14 @@ export default function PerformanceChart() {
         </svg>
       </div>
 
-      <div className="mt-8 flex items-center justify-center space-x-8">
+      <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-8">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-0.5 bg-cyan-500"></div>
-          <span className="text-gray-400 text-sm font-mono">Meta Decision Engine</span>
+          <span className="text-gray-400 text-xs sm:text-sm font-mono">Meta Decision Engine</span>
         </div>
         <div className="flex items-center space-x-2">
           <div className="w-6 h-0.5 bg-orange-600 opacity-70"></div>
-          <span className="text-gray-500 text-sm font-mono">Bitcoin HODL</span>
+          <span className="text-gray-500 text-xs sm:text-sm font-mono">Bitcoin HODL</span>
         </div>
       </div>
 

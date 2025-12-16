@@ -29,15 +29,15 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-gray-200">
+    <div className="min-h-screen bg-black text-gray-200 overflow-x-hidden">
       <TimelineNav activeSection={activeSection} />
 
       <section id="opening" className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
         {/* Signal Storm Animation */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
           <svg
             viewBox="0 0 1200 800"
-            className="w-full h-full"
+            className="w-full h-full max-w-full"
             preserveAspectRatio="xMidYMid slice"
           >
             {/* Grid that fades in during Phase 2 */}
@@ -205,19 +205,19 @@ function App() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto lg:ml-[15rem] px-6 py-20">
+      <div className="w-full max-w-6xl mx-auto lg:ml-[15rem] px-4 sm:px-6 py-20">
 
         <section id="problem" className="min-h-screen flex flex-col justify-center mb-32">
           <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-red-950 bg-opacity-30 border border-red-900 rounded text-red-400 text-sm font-mono tracking-wider">
+            <div className="inline-block px-4 py-2 bg-red-950 bg-opacity-30 border border-red-900 rounded text-red-400 text-xs sm:text-sm font-mono tracking-wider">
               SYSTEMATIC FAILURE
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight text-white">
               The Core Problem
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-red-600 to-transparent"></div>
 
-            <div className="text-2xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
+            <div className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
               <p>
                 Over 90% of participants lose money in financial markets—not because of volatility,
                 not because of information asymmetry, not because of capital constraints.
@@ -261,10 +261,10 @@ function App() {
 
                <section id="rationale" className="min-h-screen flex flex-col justify-center mb-32">
           <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-gray-800 bg-opacity-50 border border-gray-700 rounded text-gray-400 text-sm font-mono tracking-wider">
+            <div className="inline-block px-4 py-2 bg-gray-800 bg-opacity-50 border border-gray-700 rounded text-gray-400 text-xs sm:text-sm font-mono tracking-wider">
               CONCEPTUAL FOUNDATION
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight text-white">
               Why a System Is Necessary
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-gray-600 to-transparent"></div>
@@ -504,15 +504,15 @@ function App() {
 
         <section id="time-coherency" className="min-h-screen flex flex-col justify-center mb-32">
           <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-blue-950 bg-opacity-30 border border-blue-900 rounded text-blue-400 text-sm font-mono tracking-wider">
+            <div className="inline-block px-4 py-2 bg-blue-950 bg-opacity-30 border border-blue-900 rounded text-blue-400 text-xs sm:text-sm font-mono tracking-wider">
               FOUNDATIONAL PRINCIPLE
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight text-white">
               Time Coherency
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-transparent"></div>
 
-            <div className="text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
+            <div className="text-lg sm:text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
               <p className="text-2xl text-white">
                 Time Coherency is not a filter. It is a first-order constraint.
               </p>
@@ -577,15 +577,15 @@ function App() {
 
         <section id="thesis" className="min-h-screen flex flex-col justify-center mb-32">
           <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-emerald-950 bg-opacity-30 border border-emerald-900 rounded text-emerald-400 text-sm font-mono tracking-wider">
+            <div className="inline-block px-4 py-2 bg-emerald-950 bg-opacity-30 border border-emerald-900 rounded text-emerald-400 text-xs sm:text-sm font-mono tracking-wider">
               CORE THESIS
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               Capital Allocation Across Regimes
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-emerald-600 to-transparent"></div>
 
-            <div className="text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
+            <div className="text-lg sm:text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
               <p className="text-2xl text-white">
                 The edge in markets does not come from predicting price,
                 but from managing capital allocation across regimes.
@@ -623,15 +623,15 @@ function App() {
 
         <section id="meta-engine" className="min-h-screen flex flex-col justify-center mb-32">
           <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-purple-950 bg-opacity-30 border border-purple-900 rounded text-purple-400 text-sm font-mono tracking-wider">
+            <div className="inline-block px-4 py-2 bg-purple-950 bg-opacity-30 border border-purple-900 rounded text-purple-400 text-xs sm:text-sm font-mono tracking-wider">
               SYSTEM OVERVIEW
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight text-white">
               Meta Decision Engine
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-purple-600 to-transparent"></div>
 
-            <div className="text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
+            <div className="text-lg sm:text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
               <p>
                 The Meta Decision Engine is a structured aggregation layer that synthesizes
                 multiple independent systems, each answering a different market question.
@@ -660,10 +660,10 @@ function App() {
 
         <section id="performance" className="min-h-screen flex flex-col justify-center mb-32">
           <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-cyan-950 bg-opacity-30 border border-cyan-900 rounded text-cyan-400 text-sm font-mono tracking-wider">
+            <div className="inline-block px-4 py-2 bg-cyan-950 bg-opacity-30 border border-cyan-900 rounded text-cyan-400 text-xs sm:text-sm font-mono tracking-wider">
               EMPIRICAL RESULTS
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight text-white">
               Performance Data
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-cyan-600 to-transparent"></div>
@@ -737,10 +737,10 @@ function App() {
         <section id="systems" className="mb-32">
           <div className="space-y-16">
             <div>
-              <div className="inline-block px-4 py-2 bg-orange-950 bg-opacity-30 border border-orange-900 rounded text-orange-400 text-sm font-mono tracking-wider mb-8">
+              <div className="inline-block px-4 py-2 bg-orange-950 bg-opacity-30 border border-orange-900 rounded text-orange-400 text-xs sm:text-sm font-mono tracking-wider mb-8">
                 SYSTEM CATEGORIES
               </div>
-              <h1 className="text-6xl font-light tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight text-white mb-4">
                 System Architecture
               </h1>
               <div className="h-1 w-24 bg-gradient-to-r from-orange-600 to-transparent"></div>
@@ -845,10 +845,10 @@ function App() {
 
         <section id="aggregation" className="min-h-screen flex flex-col justify-center mb-32">
           <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-indigo-950 bg-opacity-30 border border-indigo-900 rounded text-indigo-400 text-sm font-mono tracking-wider">
+            <div className="inline-block px-4 py-2 bg-indigo-950 bg-opacity-30 border border-indigo-900 rounded text-indigo-400 text-xs sm:text-sm font-mono tracking-wider">
               DECISION LOGIC
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight text-white">
               Aggregation Logic
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-transparent"></div>
@@ -966,15 +966,15 @@ function App() {
 
         <section id="constraints" className="min-h-screen flex flex-col justify-center mb-32">
           <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-red-950 bg-opacity-30 border border-red-900 rounded text-red-400 text-sm font-mono tracking-wider">
+            <div className="inline-block px-4 py-2 bg-red-950 bg-opacity-30 border border-red-900 rounded text-red-400 text-xs sm:text-sm font-mono tracking-wider">
               STRUCTURAL CONSTRAINTS
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               What The System Does Not Do
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-red-600 to-transparent"></div>
 
-            <div className="text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
+            <div className="text-lg sm:text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
               <p>
                 Constraints are not limitations. They are structural advantages.
                 By defining what the system will not do, operational discipline is enforced.
@@ -1042,7 +1042,7 @@ function App() {
             <div className="inline-block px-4 py-2 bg-gray-800 bg-opacity-50 border border-gray-700 rounded text-gray-400 text-sm font-mono tracking-wider">
               SYSTEM NOTICE
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl sm:text-6xl font-light tracking-tight leading-tight text-white">
               Disclaimer & System Status
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-gray-600 to-transparent"></div>
@@ -1057,7 +1057,7 @@ function App() {
                 }}
               />
 
-              <div className="relative p-8 bg-gray-900 bg-opacity-40 border border-gray-700 space-y-6">
+              <div className="relative p-4 sm:p-8 bg-gray-900 bg-opacity-40 border border-gray-700 space-y-6">
                 <div className="mb-8">
                   <p className="text-sm text-gray-500 font-mono mb-2">All data presented reflects the system state as of:</p>
                   <p
@@ -1088,13 +1088,25 @@ function App() {
                 </p>
               </div>
             </div>
+
+            {/* Research Dossier Button - Only Location */}
+            <div className="mt-16 w-full">
+              <a
+                href="https://dossierquant.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full sm:w-auto sm:inline-block px-8 py-4 bg-cyan-900 bg-opacity-40 border-2 border-cyan-700 text-cyan-400 font-mono tracking-wide text-center hover:bg-cyan-800 hover:bg-opacity-50 hover:border-cyan-600 hover:text-cyan-300 transition-all duration-300 text-sm sm:text-base"
+              >
+                View System Design Dossier
+              </a>
+            </div>
           </div>
         </section>
       </div>
 
-      <footer className="border-t border-gray-800 py-12 bg-black">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-gray-600 text-sm font-mono">
+      <footer className="border-t border-gray-800 py-12 bg-black w-full">
+        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 text-center">
+          <p className="text-gray-600 text-xs sm:text-sm font-mono">
             Systematic Investment Framework — Research & Educational Purpose Only
           </p>
         </div>
