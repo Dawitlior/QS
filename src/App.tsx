@@ -210,35 +210,35 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <a
             href="https://dossierquant.netlify.app/"
-            className="group block w-full py-8 px-6 md:px-12 bg-gradient-to-r from-cyan-950/30 via-emerald-950/30 to-cyan-950/30 border-b border-cyan-900/30 hover:border-cyan-700/50 hover:from-cyan-950/50 hover:via-emerald-950/50 hover:to-cyan-950/50 transition-all duration-500"
+            className="group block w-full py-6 md:py-8 px-4 md:px-12 bg-gradient-to-r from-cyan-950/30 via-emerald-950/30 to-cyan-950/30 border-b border-cyan-900/30 hover:border-cyan-700/50 hover:from-cyan-950/50 hover:via-emerald-950/50 hover:to-cyan-950/50 transition-all duration-500"
           >
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <p className="text-xs tracking-[0.3em] uppercase text-cyan-600 font-mono mb-2">RESEARCH & DESIGN</p>
-                <p className="text-xl md:text-2xl text-white font-light tracking-tight group-hover:text-cyan-400 transition-colors duration-300">
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex-1 min-w-0">
+                <p className="text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase text-cyan-600 font-mono mb-1 md:mb-2">RESEARCH & DESIGN</p>
+                <p className="text-lg md:text-2xl text-white font-light tracking-tight group-hover:text-cyan-400 transition-colors duration-300 truncate">
                   View System Design Dossier
                 </p>
-                <p className="text-sm text-gray-500 mt-2 font-light">A detailed examination of system architecture, methodology, and implementation logic</p>
+                <p className="text-xs md:text-sm text-gray-500 mt-1 md:mt-2 font-light hidden sm:block">A detailed examination of system architecture, methodology, and implementation logic</p>
               </div>
-              <ChevronRight className="w-6 h-6 md:w-8 md:h-8 text-cyan-600 group-hover:text-cyan-400 group-hover:translate-x-2 transition-all duration-300 flex-shrink-0 ml-6" />
+              <ChevronRight className="w-5 h-5 md:w-8 md:h-8 text-cyan-600 group-hover:text-cyan-400 group-hover:translate-x-2 transition-all duration-300 flex-shrink-0" />
             </div>
           </a>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto lg:ml-[15rem] px-6 py-20">
+      <div className="max-w-6xl mx-auto lg:ml-[15rem] px-4 md:px-6 py-12 md:py-20">
 
-        <section id="problem" className="min-h-screen flex flex-col justify-center mb-32">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-red-950 bg-opacity-30 border border-red-900 rounded text-red-400 text-sm font-mono tracking-wider">
+        <section id="problem" className="min-h-screen flex flex-col justify-center mb-20 md:mb-32">
+          <div className="space-y-6 md:space-y-8">
+            <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-red-950 bg-opacity-30 border border-red-900 rounded text-red-400 text-xs md:text-sm font-mono tracking-wider">
               SYSTEMATIC FAILURE
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               The Core Problem
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-red-600 to-transparent"></div>
+            <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-red-600 to-transparent"></div>
 
-            <div className="text-2xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
+            <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-400 max-w-4xl space-y-4 md:space-y-6 mt-8 md:mt-12">
               <p>
                 Over 90% of participants lose money in financial markets—not because of volatility,
                 not because of information asymmetry, not because of capital constraints.
@@ -249,7 +249,7 @@ function App() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-16">
               {[
                 'Discretionary decision-making',
                 'Narrative-driven behavior',
@@ -260,18 +260,18 @@ function App() {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="group p-6 bg-gray-900 bg-opacity-30 border border-gray-800 hover:border-red-900 transition-all duration-300 hover:translate-x-2"
+                  className="group p-4 md:p-6 bg-gray-900 bg-opacity-30 border border-gray-800 hover:border-red-900 transition-all duration-300 hover:translate-x-2"
                 >
                   <div className="flex items-start space-x-3">
                     <div className="mt-1 w-2 h-2 bg-red-600 flex-shrink-0 group-hover:bg-red-500"></div>
-                    <p className="text-gray-300 leading-relaxed">{item}</p>
+                    <p className="text-sm md:text-base text-gray-300 leading-relaxed">{item}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-16 p-8 bg-gradient-to-r from-gray-900 to-black border-l-4 border-red-600">
-              <p className="text-xl text-white font-light tracking-wide">
+            <div className="mt-8 md:mt-16 p-4 md:p-8 bg-gradient-to-r from-gray-900 to-black border-l-2 md:border-l-4 border-red-600">
+              <p className="text-base md:text-lg lg:text-xl text-white font-light tracking-wide">
                 Markets do not punish lack of information—they punish lack of structure.
               </p>
             </div>
@@ -280,18 +280,18 @@ function App() {
 
         <EvidenceLayer />
 
-               <section id="rationale" className="min-h-screen flex flex-col justify-center mb-32">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-gray-800 bg-opacity-50 border border-gray-700 rounded text-gray-400 text-sm font-mono tracking-wider">
+               <section id="rationale" className="min-h-screen flex flex-col justify-center mb-20 md:mb-32">
+          <div className="space-y-6 md:space-y-8">
+            <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-gray-800 bg-opacity-50 border border-gray-700 rounded text-gray-400 text-xs md:text-sm font-mono tracking-wider">
               CONCEPTUAL FOUNDATION
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               Why a System Is Necessary
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-gray-600 to-transparent"></div>
+            <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-gray-600 to-transparent"></div>
 
-            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-8 text-lg text-gray-400 leading-relaxed max-w-2xl">
+            <div className="mt-8 md:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+              <div className="space-y-6 md:space-y-8 text-base md:text-lg text-gray-400 leading-relaxed max-w-2xl">
                 <p
                   className="text-gray-500 italic"
                   style={{ animation: 'textFadeIn 1s ease-out 0.3s both' }}
@@ -332,7 +332,7 @@ function App() {
                 </p>
 
                 <p
-                  className="text-2xl text-white pt-6"
+                  className="text-xl md:text-2xl text-white pt-4 md:pt-6"
                   style={{ animation: 'textFadeIn 1s ease-out 1.8s both' }}
                 >
                   A system exists to introduce negentropy.
@@ -365,10 +365,10 @@ function App() {
                 </p>
 
                 <div
-                  className="pt-8 border-t border-gray-800"
+                  className="pt-6 md:pt-8 border-t border-gray-800"
                   style={{ animation: 'textFadeIn 1s ease-out 3.3s both' }}
                 >
-                  <p className="text-xl text-gray-300 font-light leading-relaxed">
+                  <p className="text-lg md:text-xl text-gray-300 font-light leading-relaxed">
                     When entropy is unavoidable,<br />
                     structure is not optional.
                   </p>
@@ -523,18 +523,18 @@ function App() {
           </div>
         </section>
 
-        <section id="time-coherency" className="min-h-screen flex flex-col justify-center mb-32">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-blue-950 bg-opacity-30 border border-blue-900 rounded text-blue-400 text-sm font-mono tracking-wider">
+        <section id="time-coherency" className="min-h-screen flex flex-col justify-center mb-20 md:mb-32">
+          <div className="space-y-6 md:space-y-8">
+            <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-blue-950 bg-opacity-30 border border-blue-900 rounded text-blue-400 text-xs md:text-sm font-mono tracking-wider">
               FOUNDATIONAL PRINCIPLE
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               Time Coherency
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-transparent"></div>
+            <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-blue-600 to-transparent"></div>
 
-            <div className="text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
-              <p className="text-2xl text-white">
+            <div className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 max-w-4xl space-y-4 md:space-y-6 mt-8 md:mt-12">
+              <p className="text-xl md:text-2xl text-white">
                 Time Coherency is not a filter. It is a first-order constraint.
               </p>
               <p>
@@ -549,9 +549,9 @@ function App() {
 
             <TimeCoherencyVisual />
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="p-8 bg-gray-900 bg-opacity-50 border border-blue-900">
-                <h3 className="text-xl text-white mb-4 font-mono">Temporal Alignment</h3>
+            <div className="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              <div className="p-4 md:p-8 bg-gray-900 bg-opacity-50 border border-blue-900">
+                <h3 className="text-lg md:text-xl text-white mb-4 font-mono">Temporal Alignment</h3>
                 <ul className="space-y-3 text-gray-400">
                   <li className="flex items-start space-x-3">
                     <ChevronRight className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
@@ -568,8 +568,8 @@ function App() {
                 </ul>
               </div>
 
-              <div className="p-8 bg-gray-900 bg-opacity-50 border border-blue-900">
-                <h3 className="text-xl text-white mb-4 font-mono">Operational Constraint</h3>
+              <div className="p-4 md:p-8 bg-gray-900 bg-opacity-50 border border-blue-900">
+                <h3 className="text-lg md:text-xl text-white mb-4 font-mono">Operational Constraint</h3>
                 <ul className="space-y-3 text-gray-400">
                   <li className="flex items-start space-x-3">
                     <ChevronRight className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
@@ -587,8 +587,8 @@ function App() {
               </div>
             </div>
 
-            <div className="mt-12 p-8 bg-gradient-to-r from-blue-950 to-black border-l-4 border-blue-600 bg-opacity-30">
-              <p className="text-xl text-white font-light tracking-wide">
+            <div className="mt-8 md:mt-12 p-4 md:p-8 bg-gradient-to-r from-blue-950 to-black border-l-2 md:border-l-4 border-blue-600 bg-opacity-30">
+              <p className="text-base md:text-lg lg:text-xl text-white font-light tracking-wide">
                 Most losses come from mixing short-term signals with long-term positions.
                 Time incoherence creates overexposure and structural vulnerability.
               </p>
@@ -596,18 +596,18 @@ function App() {
           </div>
         </section>
 
-        <section id="thesis" className="min-h-screen flex flex-col justify-center mb-32">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-emerald-950 bg-opacity-30 border border-emerald-900 rounded text-emerald-400 text-sm font-mono tracking-wider">
+        <section id="thesis" className="min-h-screen flex flex-col justify-center mb-20 md:mb-32">
+          <div className="space-y-6 md:space-y-8">
+            <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-emerald-950 bg-opacity-30 border border-emerald-900 rounded text-emerald-400 text-xs md:text-sm font-mono tracking-wider">
               CORE THESIS
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               Capital Allocation Across Regimes
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-emerald-600 to-transparent"></div>
+            <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-emerald-600 to-transparent"></div>
 
-            <div className="text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
-              <p className="text-2xl text-white">
+            <div className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 max-w-4xl space-y-4 md:space-y-6 mt-8 md:mt-12">
+              <p className="text-xl md:text-2xl text-white">
                 The edge in markets does not come from predicting price,
                 but from managing capital allocation across regimes.
               </p>
@@ -618,7 +618,7 @@ function App() {
               </p>
             </div>
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               {[
                 { title: 'No Prediction', desc: 'Price forecasting is not attempted' },
                 { title: 'Regime Awareness', desc: 'Capital moves based on market state' },
@@ -626,33 +626,33 @@ function App() {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="group p-8 bg-gray-900 bg-opacity-30 border border-gray-800 hover:border-emerald-700 transition-all duration-300 hover:scale-105"
+                  className="group p-4 md:p-8 bg-gray-900 bg-opacity-30 border border-gray-800 hover:border-emerald-700 transition-all duration-300 hover:scale-105"
                 >
-                  <h3 className="text-lg text-white mb-3 font-mono">{item.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-base md:text-lg text-white mb-3 font-mono">{item.title}</h3>
+                  <p className="text-sm md:text-base text-gray-400 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-12 p-8 bg-gradient-to-r from-emerald-950 to-black border-l-4 border-emerald-600 bg-opacity-30">
-              <p className="text-2xl text-white font-light tracking-wide">
+            <div className="mt-8 md:mt-12 p-4 md:p-8 bg-gradient-to-r from-emerald-950 to-black border-l-2 md:border-l-4 border-emerald-600 bg-opacity-30">
+              <p className="text-lg md:text-xl lg:text-2xl text-white font-light tracking-wide">
                 Capital should move—not opinions.
               </p>
             </div>
           </div>
         </section>
 
-        <section id="meta-engine" className="min-h-screen flex flex-col justify-center mb-32">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-purple-950 bg-opacity-30 border border-purple-900 rounded text-purple-400 text-sm font-mono tracking-wider">
+        <section id="meta-engine" className="min-h-screen flex flex-col justify-center mb-20 md:mb-32">
+          <div className="space-y-6 md:space-y-8">
+            <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-purple-950 bg-opacity-30 border border-purple-900 rounded text-purple-400 text-xs md:text-sm font-mono tracking-wider">
               SYSTEM OVERVIEW
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               Meta Decision Engine
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-purple-600 to-transparent"></div>
+            <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-purple-600 to-transparent"></div>
 
-            <div className="text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
+            <div className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 max-w-4xl space-y-4 md:space-y-6 mt-8 md:mt-12">
               <p>
                 The Meta Decision Engine is a structured aggregation layer that synthesizes
                 multiple independent systems, each answering a different market question.
@@ -665,8 +665,8 @@ function App() {
 
             <MetaEngineFlow />
 
-            <div className="mt-16 p-8 bg-gradient-to-r from-purple-950 to-black border-l-4 border-purple-600 bg-opacity-30">
-              <p className="text-xl text-white font-light tracking-wide">
+            <div className="mt-8 md:mt-16 p-4 md:p-8 bg-gradient-to-r from-purple-950 to-black border-l-2 md:border-l-4 border-purple-600 bg-opacity-30">
+              <p className="text-base md:text-lg lg:text-xl text-white font-light tracking-wide">
                 The system does not decide—consensus decides.
               </p>
             </div>
@@ -679,25 +679,25 @@ function App() {
           </div>
         </section>
 
-        <section id="performance" className="min-h-screen flex flex-col justify-center mb-32">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-cyan-950 bg-opacity-30 border border-cyan-900 rounded text-cyan-400 text-sm font-mono tracking-wider">
+        <section id="performance" className="min-h-screen flex flex-col justify-center mb-20 md:mb-32">
+          <div className="space-y-6 md:space-y-8">
+            <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-cyan-950 bg-opacity-30 border border-cyan-900 rounded text-cyan-400 text-xs md:text-sm font-mono tracking-wider">
               EMPIRICAL RESULTS
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               Performance Data
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-cyan-600 to-transparent"></div>
+            <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-cyan-600 to-transparent"></div>
 
-            <div className="mt-12">
-              <div className="p-6 bg-gray-900 bg-opacity-50 border border-cyan-900 mb-8">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg text-white font-mono">Period</h3>
-                  <p className="text-cyan-400 font-mono">31 May 2025 – 12 December 2025</p>
+            <div className="mt-8 md:mt-12">
+              <div className="p-4 md:p-6 bg-gray-900 bg-opacity-50 border border-cyan-900 mb-6 md:mb-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 space-y-1 md:space-y-0">
+                  <h3 className="text-base md:text-lg text-white font-mono">Period</h3>
+                  <p className="text-sm md:text-base text-cyan-400 font-mono">31 May 2025 – 12 December 2025</p>
                 </div>
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg text-white font-mono">Benchmark</h3>
-                  <p className="text-cyan-400 font-mono">Bitcoin (BTC)</p>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-1 md:space-y-0">
+                  <h3 className="text-base md:text-lg text-white font-mono">Benchmark</h3>
+                  <p className="text-sm md:text-base text-cyan-400 font-mono">Bitcoin (BTC)</p>
                 </div>
               </div>
 
@@ -707,9 +707,9 @@ function App() {
                 <PerformanceChart />
               </div>
 
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="p-8 bg-gray-900 bg-opacity-50 border border-cyan-900">
-                  <h3 className="text-xl text-white mb-6 font-mono">Standalone System Proof</h3>
+              <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div className="p-4 md:p-8 bg-gray-900 bg-opacity-50 border border-cyan-900">
+                  <h3 className="text-lg md:text-xl text-white mb-4 md:mb-6 font-mono">Standalone System Proof</h3>
                   <p className="text-gray-400 mb-4">MTPI Performance vs Bitcoin</p>
                   <p className="text-sm text-gray-500 mb-4 font-mono">Period: From 24 August 2024</p>
 
@@ -729,8 +729,8 @@ function App() {
                   </p>
                 </div>
 
-                <div className="p-8 bg-gray-900 bg-opacity-50 border border-cyan-900">
-                  <h3 className="text-xl text-white mb-6 font-mono">Interpretation</h3>
+                <div className="p-4 md:p-8 bg-gray-900 bg-opacity-50 border border-cyan-900">
+                  <h3 className="text-lg md:text-xl text-white mb-4 md:mb-6 font-mono">Interpretation</h3>
                   <ul className="space-y-4 text-gray-400">
                     <li className="flex items-start space-x-3">
                       <ChevronRight className="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" />
@@ -755,30 +755,30 @@ function App() {
           </div>
         </section>
 
-        <section id="systems" className="mb-32">
-          <div className="space-y-16">
+        <section id="systems" className="mb-20 md:mb-32">
+          <div className="space-y-12 md:space-y-16">
             <div>
-              <div className="inline-block px-4 py-2 bg-orange-950 bg-opacity-30 border border-orange-900 rounded text-orange-400 text-sm font-mono tracking-wider mb-8">
+              <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-orange-950 bg-opacity-30 border border-orange-900 rounded text-orange-400 text-xs md:text-sm font-mono tracking-wider mb-6 md:mb-8">
                 SYSTEM CATEGORIES
               </div>
-              <h1 className="text-6xl font-light tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white mb-4">
                 System Architecture
               </h1>
-              <div className="h-1 w-24 bg-gradient-to-r from-orange-600 to-transparent"></div>
+              <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-orange-600 to-transparent"></div>
             </div>
 
-            <div className="space-y-16">
+            <div className="space-y-12 md:space-y-16">
               <div>
-                <div className="flex items-center space-x-4 mb-8">
-                  <TrendingUp className="w-8 h-8 text-orange-500" />
-                  <h2 className="text-3xl text-white font-light">Return-Generating Standalone Systems</h2>
+                <div className="flex items-center space-x-3 md:space-x-4 mb-6 md:mb-8">
+                  <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-orange-500" />
+                  <h2 className="text-2xl md:text-3xl text-white font-light">Return-Generating Standalone Systems</h2>
                 </div>
-                <p className="text-gray-400 mb-8 max-w-3xl">
+                <p className="text-sm md:text-base text-gray-400 mb-6 md:mb-8 max-w-3xl">
                   These systems are designed to generate returns independently.
                   Each evaluates specific market behavior within its intended time period.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   {[
                     { name: 'LTPI', period: 'Long-term', desc: 'Evaluates macro trend persistence and structural market conditions over extended time horizons' },
                     { name: 'MTPI', period: 'Medium-term', desc: 'Analyzes intermediate trend strength and momentum sustainability across multi-week periods' },
@@ -805,19 +805,19 @@ function App() {
               </div>
 
               <div>
-                <div className="flex items-center space-x-4 mb-8">
-                  <Activity className="w-8 h-8 text-blue-500" />
-                  <h2 className="text-3xl text-white font-light">Market State & Regime Systems</h2>
+                <div className="flex items-center space-x-3 md:space-x-4 mb-6 md:mb-8">
+                  <Activity className="w-6 h-6 md:w-8 md:h-8 text-blue-500" />
+                  <h2 className="text-2xl md:text-3xl text-white font-light">Market State & Regime Systems</h2>
                 </div>
-                <p className="text-gray-400 mb-2 max-w-3xl">
+                <p className="text-sm md:text-base text-gray-400 mb-2 max-w-3xl">
                   These systems provide context, not returns. They evaluate market participation,
                   trend persistence, and structural conditions.
                 </p>
-                <p className="text-white mb-8 max-w-3xl font-mono text-sm">
+                <p className="text-white mb-6 md:mb-8 max-w-3xl font-mono text-xs md:text-sm">
                   These systems do not allocate capital.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                   {[
                     { name: 'USDT TPI', desc: 'Monitors stablecoin dominance and risk-off capital flows as proxy for market fear' },
                     { name: 'Others TPI', desc: 'Evaluates altcoin participation breadth and market-wide momentum diffusion' },
@@ -835,11 +835,11 @@ function App() {
               </div>
 
               <div>
-                <div className="flex items-center space-x-4 mb-8">
-                  <Network className="w-8 h-8 text-emerald-500" />
-                  <h2 className="text-3xl text-white font-light">Relative Strength Systems</h2>
+                <div className="flex items-center space-x-3 md:space-x-4 mb-6 md:mb-8">
+                  <Network className="w-6 h-6 md:w-8 md:h-8 text-emerald-500" />
+                  <h2 className="text-2xl md:text-3xl text-white font-light">Relative Strength Systems</h2>
                 </div>
-                <p className="text-gray-400 mb-8 max-w-3xl">
+                <p className="text-sm md:text-base text-gray-400 mb-6 md:mb-8 max-w-3xl">
                   Relative strength defines capital preference. Allocation depends on regime approval.
                   No allocation occurs in unfavorable conditions.
                 </p>
@@ -864,20 +864,20 @@ function App() {
           <TournamentBracket active={true} />
         </section>
 
-        <section id="aggregation" className="min-h-screen flex flex-col justify-center mb-32">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-indigo-950 bg-opacity-30 border border-indigo-900 rounded text-indigo-400 text-sm font-mono tracking-wider">
+        <section id="aggregation" className="min-h-screen flex flex-col justify-center mb-20 md:mb-32">
+          <div className="space-y-6 md:space-y-8">
+            <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-indigo-950 bg-opacity-30 border border-indigo-900 rounded text-indigo-400 text-xs md:text-sm font-mono tracking-wider">
               DECISION LOGIC
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               Aggregation Logic
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-transparent"></div>
+            <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-indigo-600 to-transparent"></div>
 
-            <div className="mt-16 space-y-8">
-              <h2 className="text-3xl text-white font-light">Why Aggregation Is Necessary</h2>
+            <div className="mt-8 md:mt-16 space-y-6 md:space-y-8">
+              <h2 className="text-2xl md:text-3xl text-white font-light">Why Aggregation Is Necessary</h2>
 
-              <div className="text-lg leading-relaxed text-gray-400 max-w-4xl space-y-6">
+              <div className="text-base md:text-lg leading-relaxed text-gray-400 max-w-4xl space-y-4 md:space-y-6">
                 <p>
                   Standalone systems can be correct. They can be profitable.
                   And they can still fail structurally.
@@ -894,9 +894,9 @@ function App() {
 
               <SignalConflictVisual />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <div className="p-6 bg-gray-900 bg-opacity-50 border border-indigo-900">
-                  <h3 className="text-lg text-white mb-4 font-mono">The Problem</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12">
+                <div className="p-4 md:p-6 bg-gray-900 bg-opacity-50 border border-indigo-900">
+                  <h3 className="text-base md:text-lg text-white mb-4 font-mono">The Problem</h3>
                   <ul className="space-y-3 text-gray-400 text-sm">
                     <li className="flex items-start space-x-3">
                       <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -917,8 +917,8 @@ function App() {
                   </ul>
                 </div>
 
-                <div className="p-6 bg-gray-900 bg-opacity-50 border border-indigo-900">
-                  <h3 className="text-lg text-white mb-4 font-mono">The Solution</h3>
+                <div className="p-4 md:p-6 bg-gray-900 bg-opacity-50 border border-indigo-900">
+                  <h3 className="text-base md:text-lg text-white mb-4 font-mono">The Solution</h3>
                   <ul className="space-y-3 text-gray-400 text-sm">
                     <li className="flex items-start space-x-3">
                       <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -940,15 +940,15 @@ function App() {
                 </div>
               </div>
 
-              <div className="mt-8 p-8 bg-gradient-to-r from-indigo-950 to-black border-l-4 border-indigo-600 bg-opacity-30">
-                <p className="text-xl text-white font-light tracking-wide">
+              <div className="mt-6 md:mt-8 p-4 md:p-8 bg-gradient-to-r from-indigo-950 to-black border-l-2 md:border-l-4 border-indigo-600 bg-opacity-30">
+                <p className="text-base md:text-lg lg:text-xl text-white font-light tracking-wide">
                   Without aggregation, standalone systems produce noise.
                   With aggregation, they produce decisions.
                 </p>
               </div>
             </div>
 
-            <div className="text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-16">
+            <div className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 max-w-4xl space-y-4 md:space-y-6 mt-8 md:mt-16">
               <p>
                 Each system outputs a state and a score between -1 and +1.
                 Scores are weighted based on system significance and temporal relevance.
@@ -960,8 +960,8 @@ function App() {
               </p>
             </div>
 
-            <div className="mt-16 p-8 bg-gray-900 bg-opacity-50 border border-indigo-900">
-              <h3 className="text-xl text-white mb-6 font-mono">Output Structure</h3>
+            <div className="mt-8 md:mt-16 p-4 md:p-8 bg-gray-900 bg-opacity-50 border border-indigo-900">
+              <h3 className="text-lg md:text-xl text-white mb-6 font-mono">Output Structure</h3>
               <div className="space-y-6">
                 {[
                   { step: 'System State', desc: 'Each system reports current state (active, neutral, inactive)' },
@@ -985,24 +985,24 @@ function App() {
           </div>
         </section>
 
-        <section id="constraints" className="min-h-screen flex flex-col justify-center mb-32">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-red-950 bg-opacity-30 border border-red-900 rounded text-red-400 text-sm font-mono tracking-wider">
+        <section id="constraints" className="min-h-screen flex flex-col justify-center mb-20 md:mb-32">
+          <div className="space-y-6 md:space-y-8">
+            <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-red-950 bg-opacity-30 border border-red-900 rounded text-red-400 text-xs md:text-sm font-mono tracking-wider">
               STRUCTURAL CONSTRAINTS
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               What The System Does Not Do
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-red-600 to-transparent"></div>
+            <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-red-600 to-transparent"></div>
 
-            <div className="text-xl leading-relaxed text-gray-400 max-w-4xl space-y-6 mt-12">
+            <div className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 max-w-4xl space-y-4 md:space-y-6 mt-8 md:mt-12">
               <p>
                 Constraints are not limitations. They are structural advantages.
                 By defining what the system will not do, operational discipline is enforced.
               </p>
             </div>
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {[
                 {
                   icon: Lock,
@@ -1050,25 +1050,25 @@ function App() {
               ))}
             </div>
 
-            <div className="mt-12 p-8 bg-gradient-to-r from-red-950 to-black border-l-4 border-red-600 bg-opacity-30">
-              <p className="text-xl text-white font-light tracking-wide">
+            <div className="mt-8 md:mt-12 p-4 md:p-8 bg-gradient-to-r from-red-950 to-black border-l-2 md:border-l-4 border-red-600 bg-opacity-30">
+              <p className="text-base md:text-lg lg:text-xl text-white font-light tracking-wide">
                 Constraints enforce discipline. Discipline preserves capital. Capital preservation enables compounding.
               </p>
             </div>
           </div>
         </section>
 
-        <section id="disclaimer" className="min-h-screen flex flex-col justify-center mb-32">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-2 bg-gray-800 bg-opacity-50 border border-gray-700 rounded text-gray-400 text-sm font-mono tracking-wider">
+        <section id="disclaimer" className="min-h-screen flex flex-col justify-center mb-20 md:mb-32">
+          <div className="space-y-6 md:space-y-8">
+            <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-gray-800 bg-opacity-50 border border-gray-700 rounded text-gray-400 text-xs md:text-sm font-mono tracking-wider">
               SYSTEM NOTICE
             </div>
-            <h1 className="text-6xl font-light tracking-tight leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white">
               Disclaimer & System Status
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-gray-600 to-transparent"></div>
+            <div className="h-0.5 md:h-1 w-16 md:w-24 bg-gradient-to-r from-gray-600 to-transparent"></div>
 
-            <div className="mt-12 relative overflow-hidden">
+            <div className="mt-8 md:mt-12 relative overflow-hidden">
               {/* Horizontal shimmer animation */}
               <div
                 className="absolute inset-0 pointer-events-none"
@@ -1078,18 +1078,18 @@ function App() {
                 }}
               />
 
-              <div className="relative p-8 bg-gray-900 bg-opacity-40 border border-gray-700 space-y-6">
-                <div className="mb-8">
-                  <p className="text-sm text-gray-500 font-mono mb-2">All data presented reflects the system state as of:</p>
+              <div className="relative p-4 md:p-8 bg-gray-900 bg-opacity-40 border border-gray-700 space-y-4 md:space-y-6">
+                <div className="mb-6 md:mb-8">
+                  <p className="text-xs md:text-sm text-gray-500 font-mono mb-2">All data presented reflects the system state as of:</p>
                   <p
-                    className="text-2xl text-white font-mono"
+                    className="text-xl md:text-2xl text-white font-mono"
                     style={{ animation: 'datePulse 3s ease-in-out infinite' }}
                   >
                     30.12.2025
                   </p>
                 </div>
 
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                   This framework is under continuous development.
                   Formulas, scoring logic, thresholds, and execution rules may contain inaccuracies,
                   simplifications,
@@ -1113,9 +1113,9 @@ function App() {
         </section>
       </div>
 
-      <footer className="border-t border-gray-800 py-12 bg-black">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-gray-600 text-sm font-mono">
+      <footer className="border-t border-gray-800 py-8 md:py-12 bg-black">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
+          <p className="text-gray-600 text-xs md:text-sm font-mono">
             Systematic Investment Framework — Research & Educational Purpose Only
           </p>
         </div>
